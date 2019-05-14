@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/hellofunction",
+        "function": "HelloFunction"
+      },
+      {
+        "source": "/hellorun/**",
+        "run": {
+          "serviceId": "cloudrun",
+          "region": "us-central1"
+        }
+      }
+    ]
+  }
+}
